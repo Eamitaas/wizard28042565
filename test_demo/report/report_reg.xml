@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="paperformat_test_demo_sale_report" model="report.paperformat">
+            <field name="name">A4 sale report</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">32</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">45</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+                id="test_demo_sale_report"
+                model="test.demo"
+                menu="True"
+                report_type="qweb-pdf"
+                string="ใบเสนอราคา"
+                paperformat="paperformat_test_demo_sale_report"
+                name="test_demo.test_demo_sale_report_id"
+                file="test_demo.test_demo_sale_report_id"
+        />
+
+        <!--        4 1,3-->
+        <report
+                id="test_demo_report"
+                model="test.demo.wizard"
+                menu="False"
+                report_type="qweb-pdf"
+                string="ใบเสนอราคา"
+                paperformat="paperformat_test_demo_sale_report"
+                name="test_demo.test_demo_report_id"
+                file="test_demo.test_demo_report_id"
+        />
+
+    </data>
+</odoo>

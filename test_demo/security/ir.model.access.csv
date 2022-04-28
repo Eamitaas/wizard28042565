@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_test_demo,test_demo group,model_test_demo,base.group_user,1,1,1,1
+access_test_demo_wizard,test_demo_wizard group,model_test_demo_wizard,base.group_user,1,1,1,1
+access_part_line,part_line group,model_part_line,base.group_user,1,1,1,1
+
+
+
+
+
+
+
+
+
+
+

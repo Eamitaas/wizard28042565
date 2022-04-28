@@ -1,0 +1,95 @@
+<odoo>
+    <data>
+
+        <!--form-->
+        <record id="test_demo_form" model="ir.ui.view">
+            <field name="name">test.demo.form</field>
+            <field name="model">test.demo</field>
+            <field name="arch" type="xml">
+                <form string="Account">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="address"/>
+                                <field name="address_1"/>
+                                <field name="number"/>
+                                <field name="nameadd"/>
+                                <field name="datetime_line"/>
+                            </group>
+                            <group>
+                                <field name="numberorder"/>
+                                <field name="date"/>
+                                <field name="usesale"/>
+                                <field name="payment"/>
+                                <field name="dateline"/>
+                                <field name="numberrefer"/>
+                            </group>
+
+                            <group colspan="2">
+                                <field name="part_line">
+                                    <tree editable="bottom">
+                                        <!--<field name="partner_id"/>-->
+                                        <field name="details"/>
+                                        <field name="quantity"/>
+                                        <field name="unit"/>
+                                        <field name="priceunit"/>
+                                        <field name="discount"/>
+                                        <field name="price"/>
+
+                                    </tree>
+                                </field>
+                            </group>
+
+                            <group>
+                                <group>
+                                    <field name="sum"/>
+                                    <field name="discount_id"/>
+                                    <field name="remaining"/>
+                                    <field name="tax"/>
+                                    <field name="amount"/>
+
+
+                                </group>
+                                <group>
+                                    <field name="pricth"/>
+                                </group>
+
+
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_test_demo_tree" model="ir.ui.view">
+            <field name="name">test_demo.tree</field>
+            <field name="model">test.demo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_test_demo" model="ir.actions.act_window">
+            <field name="name">Test</field>
+            <field name="res_model">test.demo</field>
+            <field name="view_id" ref="view_test_demo_tree"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_test_demo_main"
+                  name="tast"
+                  parent="sale.sale_order_menu"
+                  sequence="1"/>
+
+        <menuitem id="menu_test_demo"
+                  name="test_demo"
+                  action="action_test_demo"
+                  parent="sale.sale_order_menu"
+                  sequence="1"/>
+    </data>
+</odoo>

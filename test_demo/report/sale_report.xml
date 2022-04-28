@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="test_demo_sale_report_id">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.basic_layout">
+
+                <div class="header">
+                    <t t-set="num" t-value="5"/>
+<!--                    Name-->
+                    <h5>บริษัท เอ็น ยู ที แมชชีนเนอรี่ จำกัด ( สำนักงานใหญ่ )</h5>
+                    <table width="100%">
+                        <tr>
+                            <td width="70%">
+                                <h5>N U T MACHINERY CO.,LTD (Head office)</h5>
+                            </td>
+                              <td width="30%">
+                                <h3>ใบส่งของชั่วคราว</h3>
+                            </td>
+                        </tr>
+                    </table>
+<!--                    <span>N U T MACHINERY CO.,LTD (Head office)</span>-->
+<!--                    <div align = 'left'>N U T MACHINERY CO.,LTD (Head office)</div>-->
+<!--                    <div align = 'right'>ใบส่งของชั่วคราว</div>-->
+<!--                    <br/>-->
+<!--                    <span>Email nutmachinery@gmail.com</span>-->
+<!--                    <span>Tel 02-536-7857-9,02-536-8041-3</span>-->
+                    <table width="100%">
+                        <tr>
+                            <td width="74%">
+                                <span>Email nutmachinery@gmail.com Tel 02-536-7857-9,02-536-8041-3 </span>
+                            </td>
+                            <td width="26%">
+                                <span>หน้า 1/1</span>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <tr>
+                            <td width="100%">
+                                <span>www.nutmachinery.com Line @nut.skf</span>
+                            </td>
+
+
+                        </tr>
+                    </table>
+                     <table width="100%">
+                        <tr>
+                            <th width="19%">
+                                ชื่อลูกค้า
+                            </th>
+                            <td width="43%">
+                                 :
+                                <span t-field="o.name"/>
+                            </td>
+                            <th width="19%">
+                                เลขที่ใบส่งของชั่วคราว
+                            </th>
+                            <td width="19%">
+                                 :
+                                <span t-field="o.numberorder"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <th width="19%">
+                                ที่อยู่
+                            </th>
+                            <td width="43%">
+                                 :
+                                <span t-field="o.address"/>
+                            </td>
+                            <th width="19%">
+                                วันที่
+                            </th>
+                            <td width="19%">
+                                 :
+                                <span t-field="o.date"/>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <tr>
+                            <td width="19%">
+
+                            </td>
+                            <td width="43%">
+
+                                <span t-field="o.address_1"/>
+                            </td>
+                            <th width="19%">
+                                พนักงานขาย
+                            </th>
+                            <td width="19%">
+                                 :
+                                <span t-field="o.usesale"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <td width="19%">
+
+                            </td>
+                            <td width="43%">
+
+
+                            </td>
+                            <th width="19%">
+                                เงื่อนไขการชำระเงิน
+                            </th>
+                            <td width="19%">
+                                 :
+                                <span t-field="o.payment"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+
+                    <table width="100%">
+                        <tr>
+                            <th width="19%">
+                                เลขประจำตัวผู้เสียภาษี
+                            </th>
+                            <td width="43%">
+                                 :
+                                <span t-field="o.number"/>
+                            </td>
+                            <th width="19%">
+                                กำหนดยืนราคาถึงวันที่
+                            </th>
+                            <td width="19%">
+                                 :
+                                <span t-field="o.dateline"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <th width="19%">
+                                ผู้ติดต่อ
+                            </th>
+                            <td width="43%">
+                                 :
+                                <span t-field="o.nameadd"/>
+                            </td>
+                            <th width="19%">
+                                เลขอ้างอิง
+                            </th>
+                            <td width="19%">
+                                 :
+                                <span t-field="o.numberrefer"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+
+
+<!--                    <span align = 'right'>หน้า 1/1</span>-->
+
+<!--                    <br/>-->
+<!--                    <span>www.nutmachinery.com Line @nut.skf</span>-->
+<!--                    <span>Email nutmachinery@gmail.com<span/>-->
+
+
+<!--                    <span t-esc="o.name"/>-->
+                    <!--                    <br/>-->
+                    <!--                    Customer-->
+                    <!--                    <span t-field="o.name"/>-->
+                    <!--                    <span t-esc="o.partner_id"/>-->
+                    <!--                    <span t-esc="o.partner_id.street"/>-->
+
+                    <!--                    <t t-if="o.partner_id.zip">-->
+                    <!--                        <span t-field="o.partner_id.zip"/>-->
+                    <!--                    </t>-->
+                    <!--                    <t t-else="">-->
+                    <!--                        <span>no zip</span>-->
+                    <!--                    </t>-->
+
+                    <!--                    <br/>-->
+                    <!--                    num-->
+                    <!--                    <span t-esc="num"/>-->
+                    <!--                    <br/>-->
+
+                </div>
+                <div class="page">
+<!--                    <span>ss</span>-->
+                    <t t-set="num" t-value="0"/>
+<!--                    <table width="100%" class="table table-bordered"> ประกาศการสร้างตาราง-->
+                    <table width="100%" >
+                        <thead>
+                            <tr>
+                                <th>ลำดับ</th>
+                                <th>รายละเอียดสินค้า</th>
+                                <th>จำนวน</th>
+                                <th>หน่วย</th>
+                                <th>ราคาหน่วยละ</th>
+                                <th>ส่วนลด</th>
+                                <th>จำนวนเงิน</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="o.part_line" t-as="line">
+                                <t t-set="num" t-value="num + 1"/>
+                                <tr>
+                                    <td>
+                                        <span t-esc="num"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.details"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.quantity"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.unit"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.priceunit"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.discount"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.price"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+
+
+
+
+
+
+<!--                    ชื่อลูกค้า :-->
+<!--                    <span t-field="o.name"/>-->
+<!--                    <br/>-->
+<!--                    ที่อยู่ :-->
+<!--                    <span t-field="o.address"/>-->
+                    <!--                    <style>-->
+                    <!--                        table.table-bordered{-->
+                    <!--                        margin:0px;-->
+                    <!--                        width: 100%;-->
+                    <!--                        }-->
+                    <!--                        table.table-bordered &gt; thead &gt; tr &gt; th{-->
+                    <!--                        border:1px solid black;-->
+                    <!--                        padding:2px;-->
+                    <!--                        }-->
+                    <!--                        table.table-bordered &gt; thead &gt; tr &gt; td{-->
+                    <!--                        border:1px solid black;-->
+                    <!--                        padding:2px;-->
+                    <!--                        }-->
+                    <!--                        table.table-bordered &gt; tbody &gt; tr &gt; td{-->
+                    <!--                        border:1px solid black;-->
+                    <!--                        padding:2px;-->
+                    <!--                        }-->
+                    <!--                        table.table-bordered &gt; tfoot &gt; tr &gt; td{-->
+                    <!--                        border:1px solid black;-->
+                    <!--                        padding:2px;-->
+                    <!--                        }-->
+                    <!--                    </style>-->
+                    <!--                    <t t-set="num" t-value="0"/>-->
+                    <!--                    <table width="100%" class="table table-bordered">-->
+                    <!--                        <thead>-->
+                    <!--                            <tr>-->
+                    <!--                                <th>No.</th>-->
+                    <!--                                <th>Product</th>-->
+                    <!--                                <th>description</th>-->
+                    <!--                                <th>Quantity</th>-->
+                    <!--                            </tr>-->
+                    <!--                        </thead>-->
+                    <!--                        <tbody>-->
+                    <!--                            <t t-foreach="o.order_line" t-as="line">-->
+                    <!--                                <t t-set="num" t-value="num + 1"/>-->
+                    <!--                                <tr>-->
+                    <!--                                    <td>-->
+                    <!--                                        <span t-esc="num"/>-->
+                    <!--                                    </td>-->
+                    <!--                                    <td>-->
+                    <!--                                        <span t-field="line.product_id"/>-->
+                    <!--                                    </td>-->
+                    <!--                                    <td>-->
+                    <!--                                        <span t-field="line.name"/>-->
+                    <!--                                    </td>-->
+                    <!--                                    <td>-->
+                    <!--                                        <span t-field="line.product_uom_qty"/>-->
+                    <!--                                    </td>-->
+                    <!--                                </tr>-->
+                    <!--                            </t>-->
+                    <!--                        </tbody>-->
+                    <!--                    </table>-->
+                </div>
+                <div class="footer">
+<!--                    <span>ss</span>-->
+                    <table width="100%">
+                        <tr>
+                            <td width="19%">
+                                บาท
+                            </td>
+                            <td width="43%">
+
+                                <span t-field="o.pricth"/>
+                            </td>
+                            <td width="19%">
+                                รวม
+                            </td>
+                            <td width="19%">
+
+                                <span t-field="o.sum"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <th width="19%">
+                                หมายเหตุ
+                            </th>
+                            <td width="43%">
+
+                            </td>
+                            <td width="19%">
+                                ส่วนลด
+                            </td>
+                            <td width="19%">
+
+                                <span t-field="o.discount_id"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <td width="19%">
+
+                            </td>
+                            <td width="43%">
+
+                            </td>
+                            <td width="19%">
+                                คงเหลือ
+                            </td>
+                            <td width="19%">
+
+                                <span t-field="o.remaining"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <td width="19%">
+
+                            </td>
+                            <td width="43%">
+
+                            </td>
+                            <td width="19%">
+                                ภาษีมูลค่าเพิ่ม 7%
+                            </td>
+                            <td width="19%">
+                                <span t-field="o.tax"/>
+                                <span t-esc="'{0:,.0f}'.format(float(o.tax))"/>
+<!--                                <span t-field="o.datetime_line" t-options='{"widget": "date"}'/>-->
+<!--                                <span t-field="o.datetime_line" t-options='{"widget": "date"}'/> ปริ้นเวลา-->
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <td width="19%">
+
+                            </td>
+                            <td width="43%">
+
+                            </td>
+                            <td width="19%">
+                                ยอดเงินสุทธิ
+                            </td>
+                            <td width="19%">
+
+                                <span t-field="o.amount"/>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <br/>
+
+                    <table width="100%">
+                        <tr>
+                            <td width="33.3%">
+                                ..............................................................
+                            </td>
+                            <td width="33.3%">
+                                ..............................................................
+                            </td>
+                            <td width="33.3%">
+                                ..............................................................
+                            </td>
+
+
+                        </tr>
+                    </table>
+
+                    <table width="100%">
+                        <tr>
+                            <td width="33.3%">
+                                <table width="100%">
+                                    <td width="32.3%">
+                                    </td>
+                                    <td width="33.3%">
+                                        ผู้รับของ
+                                    </td>
+                                    <td width="34.3%">
+                                    </td>
+                                </table>
+
+                            </td>
+                            <td width="33.3%">
+                                <table width="100%">
+                                    <td width="26.3%">
+                                    </td>
+                                    <td width="33.3%">
+                                        ผู้จัดสินค้า
+                                    </td>
+                                    <td width="42.3%">
+                                    </td>
+                                </table>
+
+                            </td>
+                            <td width="33.3%">
+                                <table width="100%">
+                                    <td width="28.3%">
+                                    </td>
+                                    <td width="33.3%">
+                                        ผู้ทำรายการ
+                                    </td>
+                                    <td width="40.3%">
+                                    </td>
+                                </table>
+
+                            </td>
+
+
+                        </tr>
+                    </table>
+
+
+                </div>
+
+            </t>
+        </t>
+    </template>
+
+</odoo>
